@@ -1,0 +1,14 @@
+# Set the parameters to search for a hotel in Paris.
+params = {
+    "radius": 5000,
+    "types": "lodging",
+    "key": g_key,
+    "location": "48.8566, 2.3522"}
+# Use base URL to search for hotels in Paris.
+base_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+# Make request and get the JSON data from the search.
+hotels = requests.get(base_url, params=params).json()
+
+hotels
+
+
